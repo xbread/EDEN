@@ -1,16 +1,16 @@
 
-# EDEN - A Garry's Mod Roleplaying Framework
+## EDEN - A Garry's Mod Roleplaying Framework
 
-## Getting Started
+### Getting Started
  - 
 
 
 
-## Modules 
+### Modules 
  - 
  
 
-## Documentation 
+### Documentation 
  - 
  
  
