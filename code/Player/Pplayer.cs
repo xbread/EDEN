@@ -41,17 +41,15 @@ public sealed class Pplayer : Component
 
 	protected override void OnFixedUpdate() {
 		base.OnFixedUpdate();
-
 		if (Controller == null) return;
-
-
+		
 		var wish_speed = Input.Down("Run") ? RunSpeed : WalkSpeed; // is running?
 		var wish_velocity = Input.AnalogMove.Normal * wish_speed * Transform.Rotation;
 		Controller.Accelerate(wish_velocity);
 
 		if (Controller.IsOnGround){
 			Controller.Acceleration = 10f;
-			Controller.ApplyFriction(5f);
+			Controller.ApplyFriction(5f, 10f);
 
 			if (Input.Pressed("Jump")){
 				Controller.Punch(Vector3.Up * JumpHeight);
