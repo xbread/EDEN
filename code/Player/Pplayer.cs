@@ -28,13 +28,6 @@ public sealed class Pplayer : Component
 	public Angles EyeAngles{get;set;}
 	Transform init_camera_transform;
 
-
-
-    protected override void DrawGizmos()
-    {
-       Gizmo.Draw.LineSphere(EyePos, 10f);
-    }
-
     protected override void OnUpdate()
 	{
 		EyeAngles += Input.AnalogLook;
