@@ -42,7 +42,7 @@ public sealed class Pplayer : Component
 	protected override void OnFixedUpdate() {
 		base.OnFixedUpdate();
 		if (Controller == null) return;
-		
+
 		var wish_speed = Input.Down("Run") ? RunSpeed : WalkSpeed; // is running?
 		var wish_velocity = Input.AnalogMove.Normal * wish_speed * Transform.Rotation;
 		Controller.Accelerate(wish_velocity);
@@ -57,6 +57,10 @@ public sealed class Pplayer : Component
 				if (Anims != null){
 					Anims.TriggerJump();
 				}
+			
+			if (Input.Down("Duck")){
+					// Anims.DuckLevel;
+			 }
 			}
 		}else{
 			Controller.Acceleration = 2f;
